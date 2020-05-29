@@ -1,0 +1,13 @@
+@import url('./__image/place__image.css');
+
+@import url('./__label/place__label.css');
+
+@import url('./__heading/place__heading.css');
+
+@import url('./__like-btn/place__like-btn.css');
+
+.place {
+    margin-bottom: 21px;
+    width: 282px;
+    height: 361px;
+}

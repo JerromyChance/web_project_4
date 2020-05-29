@@ -1,0 +1,15 @@
+.modal__input {
+    position: absolute;
+    margin: auto;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #c9c9c9;
+    max-width: 358px;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 50px) and (max-width: 575px) {
+    .modal__input {
+        width: 200px;
+    }
+}

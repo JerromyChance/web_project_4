@@ -1,0 +1,23 @@
+@import url('./__overlay/modal__overlay.css');
+
+@import url('./__window/modal__window.css');
+
+@import url('./__close-btn/modal__close-btn.css');
+
+@import url('./__heading/modal__heading.css');
+
+@import url('./__form/modal__form.css');
+
+@import url('./__input/modal__input.css');
+
+@import url('./__save-btn/modal__save-btn.css');
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+

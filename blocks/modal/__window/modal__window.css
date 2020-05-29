@@ -1,0 +1,26 @@
+.modal__window {
+    position: fixed;
+    top: calc(50% - 200px);
+    left: calc(50% - 190px);
+    width: 430px;
+    height: 330px;
+    background-color: white;
+    border-radius: 2.5%;
+    margin: auto;
+}
+
+@media screen and (min-width: 576px) and (max-width: 899px) {
+    .modal__window {
+        top: calc(50% - 200px);
+        left: calc(50% - 230px);
+        max-width: 430px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 50px) and (max-width: 575px) {
+    .modal__window {
+        max-width: 290px;
+        margin: auto;
+    }
+}

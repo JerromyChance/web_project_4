@@ -1,0 +1,8 @@
+.place__label {
+    display: flex;
+    margin-bottom: 0;
+    height: 79px;
+    width: 282px;
+    background-color: white;
+    border-radius: 0 0 10px 10px;
+}
