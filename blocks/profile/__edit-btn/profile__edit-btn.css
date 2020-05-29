@@ -9,7 +9,7 @@
     width: 24px;
     height: 24px;
     background-color: black;
-    background-image: url('/images/pencil.png');
+    background-image: url('../../../images/pencil.png');
     background-size: 10px 10px;
     background-repeat: no-repeat;
     background-position: center;
