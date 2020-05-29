@@ -2,7 +2,7 @@
     margin: auto 15px auto auto;
     width: 22px;
     height: 20px;
-    background-image: url('/images/heart.png');
+    background-image: url('../../../images/heart.png');
     background-color: white;
     background-repeat: no-repeat;
     border: white;
