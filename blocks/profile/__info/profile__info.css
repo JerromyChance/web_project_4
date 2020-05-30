@@ -1,14 +1,16 @@
 .profile__info {
     position: relative;
-    /* display: inline; */
-    width: 428px;
+    margin-left: 0;
+    max-width: 428px;
     color: white;
-
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 
 @media screen and (min-width: 300px) and (max-width: 575px) {
     .profile__info {
-        width: 280px;
+        max-width: 280px;
+        margin: auto;
     }
 }

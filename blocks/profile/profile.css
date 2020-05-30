@@ -1,12 +1,8 @@
-@import url('./__avatar/profile__avatar.css');
-
 @import url('./__info/profile__info.css');
 
 @import url('./__picture/profile__picture.css');
 
 @import url('./__edit-btn/profile__edit-btn.css');
-
-@import url('./__picture/profile__picture.css');
 
 @import url('./__name/profile__name.css');
 
@@ -17,7 +13,7 @@
 .profile {
     display: flex;
     /* position: relative; */
-    max-width: 882px;
+    width: 882px;
     margin: 40px auto 0 auto;
 }
 

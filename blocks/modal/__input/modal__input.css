@@ -1,5 +1,7 @@
 .modal__input {
     position: absolute;
+    top: 30%;
+    left: 35px;
     margin: auto;
     background: transparent;
     border: none;
