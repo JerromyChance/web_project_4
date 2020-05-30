@@ -10,33 +10,29 @@ const save = document.querySelector('.modal__save-btn');
 const close = document.querySelector('.modal__close-btn');
 
 
-//change modal display to 'flex' from 'none; open modal
-function modalOpen() {
-  modal.classList.toggle('modal');
-}
-
-//change modal display to 'none from 'flex; close modal
-function modalClose() {
+//change modal display to 'flex' from 'none; open modal 
+// closes on `.modal__close-btn` or `.modal__save-btn` are clicked
+function modalDisplay() {
   modal.classList.toggle('modal');
 }
 
 //edit and apply changes to profile
-//prevent default load upon clicking 'save'
-//call modalClose when 'save' is clicked
-function update(apply) {
+//prevent default load upon clicking '.modal__save-btn'
+//call modalClose when '.modal__save-btn' is clicked
+function update(event) {
   name.textContent = editName.value;
   job.textContent = editJob.value;
 
-  apply.preventDefault();
+  event.preventDefault();
 
-  modalClose();
+  modalDisplay()
 }
 
 //open modal when '.profile__edit-btn' is clicked
-edit.addEventListener('click', modalOpen);
+edit.addEventListener('click', modalDisplay);
 
-//save when '.modal__save-btn' is clicked
+//save and close when '.modal__save-btn' is clicked
 save.addEventListener('click',update);
 
 //close modal when '.modal__close-btn' or 'modal__save-btn' are clicked
-close.addEventListener('click', modalClose);
+close.addEventListener('click', modalDisplay);

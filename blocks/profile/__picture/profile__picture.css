@@ -4,3 +4,9 @@
     max-height: 120px;
     border-radius: 50%;
 }
+
+@media screen and (min-width: 300px) and (max-width: 575px) {
+    .profile__picture {
+        margin: auto;
+    }
+}
