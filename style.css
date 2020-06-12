@@ -1,0 +1,39 @@
+.add_place {
+
+}
+
+.add_place-img {
+
+}
+
+.place__remove-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: url('images/trash-can.png') no-repeat center;
+    /* z-index: 10; */
+}
+
+.modal__type_edit-profile {
+
+}
+
+.modal__type_add-place {
+
+}
+
+.modal__add-close {
+
+}
+
+.modal__edit-close {
+
+}
+
+.modal__window_remove-styles {
+    background-color: none;
+    background: transparent;
+    border-radius: none;
+}

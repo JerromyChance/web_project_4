@@ -9,6 +9,7 @@
     margin: auto;
 }
 
+
 @media screen and (min-width: 576px) and (max-width: 899px) {
     .modal__window {
         top: calc(50% - 200px);

@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Around The U.S.</title>
         <link rel="stylesheet" href="./pages/index.css">
+        <link rel="stylesheet" href="./style.css">
     </head>
 
     <body class="page">
@@ -14,7 +15,11 @@
             <img src="./images/logo_white.svg" alt="Around the U.S." class="header__logo">
         </header>
 
+<!---------------------------------------------------- MAIN -->
+
         <main class="main">
+
+<!------------------------------------------------- PROFILE -->
             <section class="profile">
                 <img src="./images/jaques.png" alt="Jacques Cousteau" class="profile__picture">
                 <div class="profile__info">
@@ -24,8 +29,11 @@
                 </div>
                 <button class="profile__add-btn button"></button>
             </section>
+
+<!------------------------------------------------- PLACES -->
+
             <ul class="places">
-                <li class="place">
+                <!-- <li class="place">
                     <div class="place__image" style="background-image: url('./images/yosemite.svg');" ></div>
                     <div class="place__label">
                         <h2 class="place__heading">Yosemite Valley</h2>
@@ -66,27 +74,68 @@
                         <h2 class="place__heading">Lago di Braies</h2>
                         <button class="place__like-btn"></button>
                     </div>
-                </li>
+                </li> -->
             </ul>
 
-        <div class="modal" id="modal">
+<!-------------------------------------------------- MODALS -->
+
+        <div class="modal modal__type_edit-profile">
             <div class="modal__overlay"></div>
-            <div class="modal__window">
-            <button class="modal__close-btn button"></button>
+            <div class="modal__window ">
+            <button class="modal__close-btn modal__edit-close button"></button>
             <h2 class="modal__heading">Edit Profile</h2>
             <form action="submit" class="modal__form">
-                <input class="modal__input edit_name" type="text" name="set_name" id="set_name" size="60" placeholder="Jacques Cousteau">
-                <input class="modal__input edit_job" type="text" name="set_job" id="set_job" size="60" placeholder="Explorer">
-                <button class="modal__save-btn button">Save</button>
+                <input class="modal__input edit_name" type="text" name="set_name" id="set_name" size="60" placeholder="Name">
+                <input class="modal__input edit_job" type="text" name="set_job" id="set_job" size="60" placeholder="Job">
+                <button class="modal__save-btn button edit__save">Save</button>
             </form>
+            </div>
+        </div>
+
+        <div class="modal modal__type_add-place">
+            <div class="modal__overlay"></div>
+            <div class="modal__window ">
+            <button class="modal__close-btn modal__add-close button"></button>
+            <h2 class="modal__heading">Add Place</h2>
+            <form action="submit" class="modal__form">
+                <input class="modal__input add_place" type="text" name="set_place" id="set_place" size="60" placeholder="Location">
+                <input class="modal__input add_place-image" type="text" name="set_image" id="set_image" size="60" placeholder="Image URL">
+                <button class="modal__save-btn button place__save">Save</button>
+            </form>
+            </div>
+        </div>
+
+        <div class="modal modal__type_image">
+            <div class="modal__overlay"></div>
+            <div class="modal__window modal__window_remove-styles">
+            <button class="modal__close-btn modal__image-close button"></button>
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
             </div>
         </div>
 
         </main>
 
+<!------------------------------------------------- FOOTER -->
+
         <footer class="footer">
             <p class="footer__copyright">&copy; 2020 Jerromy Chance</p>
         </footer>
+
+<!------------------------------------- TEMPLATES & SCRIPT -->
+        
+        <template class="place-template">
+            <li class="place">
+                <div class="place__image" ></div>
+                <button class="place__remove-btn"></button>
+                <div class="place__label">
+                    <h2 class="place__heading"></h2>
+                    <button class="place__like-btn"></button>
+                </div>
+            </li>
+        </template>
 
         <script src="./pages/index.js"></script>
 
