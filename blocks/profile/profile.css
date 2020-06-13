@@ -27,7 +27,7 @@
     }
 }
 
-@media screen and (min-width: 300px) and (max-width: 575px) {
+@media screen and (min-width: 50px) and (max-width: 575px) {
     .profile {
         width: 282px;
         /* margin: 42px auto 0 auto; */

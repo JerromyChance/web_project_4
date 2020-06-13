@@ -1,107 +1,100 @@
+//-------------------------General-----------------------------------
 
-
-
-//------------PROFILE MODAL
-
-//variable declarations
 const modalWindow = document.querySelector('.modal');
-const editModal = document.querySelector('.modal__type_edit-profile');
-const addModal = document.querySelector('.modal__type_add-place');
-const imageModal = document.querySelector('.modal__type_image');
-
-const editButton = document.querySelector('.profile__edit-btn');
-const addButton = document.querySelector('.profile__add-btn');
-
-const name = document.querySelector('.profile__name');
-const editName = document.querySelector('.edit_name');
-
-const job = document.querySelector('.profile__job');
-const editJob = document.querySelector('.edit_job');
-
-const placeHeading = document.querySelector('.place__heading');
-const addPLace = document.querySelector('.add__place');
-
-const placeImage = document.querySelector('.place__image');
-const addPlaceImage = document.querySelector('.add_place-image');
-
-const editSaveButton = document.querySelector('.edit__save');
-const addSaveButton = document.querySelector('.place__save');
-
-const editClose = editModal.querySelector('.modal__edit-close');
-const addClose = addModal.querySelector('.modal__add-close');
-const imageClose = imageModal.querySelector('.modal__image-close');
-
 const likeButton = document.querySelector('.place__like-btn');
 
-
-//change modal display to 'flex' from 'none; open modal 
-// closes on `.modal__close-btn` or `.modal__save-btn` are clicked
 function modalDisplay(modal) {
   modal.classList.toggle('modal');
 }
 
+//---------------------Edit Profile-----------------------------------
 
-//edit and apply changes to profile
-//prevent default load upon clicking '.modal__save-btn'
-//call modalClose when '.modal__save-btn' is clicked
+const editModal = document.querySelector('.modal__type_edit-profile');
+const editButton = document.querySelector('.profile__edit-btn');
+const name = document.querySelector('.profile__name');
+const editName = document.querySelector('.edit_name');
+const job = document.querySelector('.profile__job');
+const editJob = document.querySelector('.edit_job');
+const editSaveButton = document.querySelector('.edit__save');
+const editClose = editModal.querySelector('.modal__edit-close');
+
 function updateProfile(event) {
   name.textContent = editName.value;
   job.textContent = editJob.value;
 
   event.preventDefault();
 
-  modalDisplay()
+  modalDisplay(editModal)
 }
-
-                function addPlace(event) {
-                  placeHeading.textContent = addPLace.value;
-                  placeImage.textContent = addPlaceImage.value;
-
-                  event.preventDefault();
-
-                  modalDisplay()
-                }
-
-  function showImage() {
-    likeButton.style.backgroundImage = url('../../../images/black-heart.png');
-  }
-
-//open modal when '.profile__edit-btn' is clicked
-
 
 editButton.addEventListener('click', () => {
   modalDisplay(editModal);
 });
+
 editClose.addEventListener('click', () => {
   modalDisplay(editModal);
 });
+
 editModal.addEventListener('submit', updateProfile);
 
+// editSaveButton.addEventListener('click', updateProfile);
+
+
+//------------------------Add Place-----------------------------------
+
+const addModal = document.querySelector('.modal__type_add-place');
+const addButton = document.querySelector('.profile__add-btn');
+const placeHeading = document.querySelector('.place__heading');
+const addPLace = document.querySelector('.add__place');
+const placeImage = document.querySelector('.place__image');
+const addPlaceImage = document.querySelector('.add_place-image');
+const addSaveButton = document.querySelector('.place__save');
+const addClose = addModal.querySelector('.modal__add-close');
+
+function addPlace(event) {
+  placeHeading.textContent = addPLace.value;
+  placeImage.textContent = addPlaceImage.value;
+  
+  event.preventDefault();
+
+  renderPlace();
+
+  modalDisplay();
+}
 addButton.addEventListener('click', () => {
   modalDisplay(addModal);
 });
+
 addClose.addEventListener('click', () => {
   modalDisplay(addModal);
 });
+
 addModal.addEventListener('submit', addPlace);
 
-// placeImage.addEventListener('click', () => {
-//   modalDisplay(imageModal);
-// });
+// addSaveButton.addEventListener('click', addPlace);
+
+
+//--------------------------------Image Zoom-----------------------------
+
+const imageModal = document.querySelector('.modal__type_image');
+const modalImage = document.querySelector('.modal__image-zoomed')
+const modalCaption = document.querySelector('.modal__image-caption')
+const imageClose = imageModal.querySelector('.modal__image-close');
+
+const viewImage() {
+  modalImage.src = placeImage.src;
+  modalCaption.textContent = placeHeading.value;
+}
+
 imageClose.addEventListener('click', () => {
   modalDisplay(imageModal);
 });
 
-// likeButton.addEventListener('click', () => {
-//   showImage();
-// });
-
-// //save and close when '.modal__save-btn' is clicked
-editSaveButton.addEventListener('click', updateProfile);
-addSaveButton.addEventListener('click', addPlace);
 
 
-//----------------------CARDS
+
+
+//-------------------------------Default Places-------------------------
 
 //card array
 const initialCards = [
@@ -131,10 +124,10 @@ const initialCards = [
   }
 ];
 
-initialCards.forEach ((data) => {
-  const placeTemplate = document.querySelector('.place-template').content.querySelector('.place');
-  const placeElement = placeTemplate.cloneNode(true);
+const placeTemplate = document.querySelector('.place-template').content.querySelector('.place');
 
+const createPlace = (data) => {
+  const placeElement = placeTemplate.cloneNode(true);
   const placeImage = placeElement.querySelector('.place__image');
   const placeHeading = placeElement.querySelector('.place__heading');
   const placeLike = placeElement.querySelector('.place__like-btn');
@@ -145,20 +138,29 @@ initialCards.forEach ((data) => {
 
   placeLike.addEventListener('click', () => {
     // changeHeartColor()
+    // activeLike(placeLike);
   })
 
   placeRemove.addEventListener('click', (e) => {
-    // remove card()
     e.target.closest('.place').remove();
   })
 
   placeImage.addEventListener('click', () => {
-      // openModal()
       modalDisplay(imageModal);
-      // showImage();
   })
 
-  const list = document.querySelector('.places');
-  list.prepend(placeElement);
+  return placeElement;
+}
 
+const list = document.querySelector('.places');
+
+const renderPlace = (data) => {
+  list.prepend(createPlace(data));
+}
+
+initialCards.forEach ((data) => {
+  renderPlace(data);
 })
+
+  
+

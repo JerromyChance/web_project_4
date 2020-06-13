@@ -1,0 +1,15 @@
+.place__remove-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 18px;
+    height: 20px;
+    background-image: url('../../../images/trash-can-lid.png'), url('../../../images/trash-can-body.png') ;
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    /* z-index: 10; */
+    border: none;
+    padding: none;
+    margin: auto;
+}

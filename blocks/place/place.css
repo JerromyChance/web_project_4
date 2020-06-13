@@ -6,6 +6,8 @@
 
 @import url('./__like-btn/place__like-btn.css');
 
+@import url('./__remove-btn/place__remove-btn.css');
+
 .place {
     position: relative;
     margin-bottom: 21px;

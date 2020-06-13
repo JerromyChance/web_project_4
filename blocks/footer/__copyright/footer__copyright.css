@@ -9,7 +9,7 @@
     line-height: 22px;
 }
 
-@media screen and (min-width: 300px) and (max-width: 899px) {
+@media screen and (min-width: 50px) and (max-width: 899px) {
     .footer__copyright {
         text-align: center;
         margin: auto;
