@@ -57,10 +57,9 @@ function addPlace(event) {
   
   event.preventDefault();
 
-  renderPlace();
-
   modalDisplay();
 }
+
 addButton.addEventListener('click', () => {
   modalDisplay(addModal);
 });
@@ -81,7 +80,7 @@ const modalImage = document.querySelector('.modal__image-zoomed')
 const modalCaption = document.querySelector('.modal__image-caption')
 const imageClose = imageModal.querySelector('.modal__image-close');
 
-const viewImage() {
+const viewImage = () => {
   modalImage.src = placeImage.src;
   modalCaption.textContent = placeHeading.value;
 }
