@@ -9,15 +9,16 @@
 
 .modal__window {
     position: fixed;
-    top: calc(50% - 200px);
+    top: 180px;
     left: calc(50% - 190px);
-    width: 430px;
-    height: 330px;
+    max-width: 430px;
+    max-height: 330px;
     background-color: white;
     border-radius: 2.5%;
     margin: auto;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
+    padding: 1px;
 }
 
 

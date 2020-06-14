@@ -21,3 +21,7 @@
 @import url('../blocks/button/button.css');
 
 @import url('../blocks/footer/footer.css');
+
+/* I COULD NOT get the following import to work with the JavaScript when linked to modal.css. What can I do? */
+
+@import url('../blocks/modal/__display-image/modal__display-image.css');

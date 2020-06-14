@@ -10,3 +10,25 @@
     background-position: center;
     border: none;
 }
+
+@media screen and (min-width: 576px) and (max-width: 899px) {
+    .modal__close-btn {
+        position: absolute;
+        /* display: inline-block; */
+        top: -35px;
+        right: -35px;
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 50px) and (max-width: 575px) {
+    .modal__close-btn {
+        position: absolute;
+        /* display: inline-block; */
+        top: -30px;
+        right: -30px;
+        margin: auto;
+        width: 30px;
+        height: 30px;
+    }
+}

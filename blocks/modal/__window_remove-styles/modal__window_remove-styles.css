@@ -1,0 +1,25 @@
+.modal__window_remove-styles {
+    position: fixed;
+    /* left: auto; */
+    top: 10%;
+    left: auto;
+    max-width: 75vw;
+    max-height: 75vw;
+    width: auto;
+    height: auto;
+    background-size: 100%;
+    background-color: #fff;
+    background: transparent;
+    border-radius: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+@media screen and (min-width: 50px) and (max-width: 899px) {
+    .modal__window_remove-styles {
+        top: 20%;
+        left: 5%;
+    }
+}

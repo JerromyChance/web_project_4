@@ -1,0 +1,24 @@
+.modal__type_image {
+    visibility: hidden;
+    background-color: #000;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 0; */
+    max-width: 75vw;
+    max-height: 75vw;
+    width: auto;
+    height: auto;
+    /* overflow: auto; */
+    margin: auto;
+}
+
+/* @media screen and (min-width: 576px) and (max-width: 899px) {
+    .modal__type_image {
+        
+}
+
+@media screen and (min-width: 50px) and (max-width: 575px) {
+    .modal__type_image {
+        
+    }
+}   */
