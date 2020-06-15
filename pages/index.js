@@ -76,10 +76,10 @@ addClose.addEventListener('click', () => {
   modalDisplay(addModal);
 });
 
-addSaveButton.addEventListener('submit', (e) => {
+addModal.addEventListener('submit', (e) => {
   e.preventDefault();
 
-  renderCard(placeHeading.value, placeImage.value);
+  renderPlace({name: placeHeading, link: placeImage});
 
   modalDisplay(addModal);
 });
