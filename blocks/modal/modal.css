@@ -24,6 +24,10 @@
 
 @import url('./__display-image/modal__display-image.css');
 
+/* Same issue here */
+
+@import url('./__input/_type/modal__input_type.css');
+
 
 
 

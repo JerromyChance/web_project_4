@@ -1,3 +1,5 @@
+@import url('./_type/modal__input_type.css');
+
 .modal__input {
     position: absolute;
     top: 30%;
