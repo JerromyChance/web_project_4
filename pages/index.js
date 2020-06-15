@@ -46,12 +46,15 @@ editModal.addEventListener('submit', updateProfile);
 const addModal = document.querySelector('.modal__type_add-place');
 const addButton = document.querySelector('.profile__add-btn');
 const placeHeading = document.querySelector('.place__heading');
-const addPLace = document.querySelector('.add__place');
+const addPlaces = document.querySelector('.add__place');
 const placeImage = document.querySelector('.place__image');
 const addPlaceImage = document.querySelector('.add_place-image');
 const addSaveButton = document.querySelector('.place__save');
 const addClose = addModal.querySelector('.modal__add-close');
 const newPLace = addModal.querySelector('.modal__form');
+
+// addPlaces.textContent = title;
+// addPLacesImage.style.backgroundImage = `url('${link}')`;
 
 function addPlace(event) {
   placeHeading.textContent = addPLace.value;
@@ -64,8 +67,8 @@ function addPlace(event) {
 
 const list = document.querySelector('.places');
 
-const renderPlace = (data) => {
-  list.prepend(createPlace(data));
+const renderPlace = (name, link) => {
+  list.prepend(createPlace(name, link));
 };
 
 addButton.addEventListener('click', () => {
@@ -85,7 +88,7 @@ addModal.addEventListener('submit', (e) => {
 });
 
 // addSaveButton.addEventListener('click', addPlace);
-addModal.addEventListener('submit', addPlace);
+// addModal.addEventListener('submit', addPlace);
 
 
 
