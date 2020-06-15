@@ -7,10 +7,8 @@
     max-height: 75vw;
     width: auto;
     height: auto;
-    background-size: 100%;
-    background-color: #fff;
-    background: transparent;
-    border-radius: none;
+    background-color: transparent;
+    border-radius: 0;
     margin: auto;
     justify-content: center;
     align-items: center;

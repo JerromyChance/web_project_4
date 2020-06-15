@@ -1,9 +1,5 @@
 //-------------------------General-----------------------------------
 
-const modalWindow = document.querySelector('.modal');
-const likeButton = document.querySelector('.place__like-btn');
-const modalSwitch = document.querySelector('.modal__display-image')
-
 function modalDisplay(modal) {
   modal.classList.toggle('modal');
 }
@@ -12,15 +8,14 @@ function modalDisplay(modal) {
 
 const editModal = document.querySelector('.modal__type_edit-profile');
 const editButton = document.querySelector('.profile__edit-btn');
-const name = document.querySelector('.profile__name');
+const profileName = document.querySelector('.profile__name');
 const editName = document.querySelector('.edit_name');
 const job = document.querySelector('.profile__job');
 const editJob = document.querySelector('.edit_job');
-const editSaveButton = document.querySelector('.edit__save');
 const editClose = editModal.querySelector('.modal__edit-close');
 
 function updateProfile(event) {
-  name.textContent = editName.value;
+  profileName.textContent = editName.value;
   job.textContent = editJob.value;
 
   event.preventDefault();
@@ -45,31 +40,12 @@ editModal.addEventListener('submit', updateProfile);
 
 const addModal = document.querySelector('.modal__type_add-place');
 const addButton = document.querySelector('.profile__add-btn');
-const placeHeading = document.querySelector('.place__heading');
 const addPlaces = document.querySelector('.modal__input_type_place-name');
-const placeImage = document.querySelector('.place__image');
 const addPlaceImage = document.querySelector('.modal__input_type_place-url');
-const addSaveButton = document.querySelector('.place__save');
 const addClose = addModal.querySelector('.modal__add-close');
-const newPLace = addModal.querySelector('.modal__form');
 
 // addPlaces.textContent = title;
 // addPLacesImage.style.backgroundImage = `url('${link}')`;
-
-function addPlace(event) {
-  placeHeading.textContent = addPLace.value;
-  placeImage.textContent = addPlaceImage.value;
-  
-  event.preventDefault();
-
-  modalDisplay();
-};
-
-const list = document.querySelector('.places');
-
-const renderPlace = (name, link) => {
-  list.prepend(createPlace(name, link));
-};
 
 addButton.addEventListener('click', () => {
   modalDisplay(addModal);
@@ -181,6 +157,12 @@ const createPlace = (data) => {
 
   return placeElement;
 }
+
+const list = document.querySelector('.places');
+
+const renderPlace = (name, link) => {
+  list.prepend(createPlace(name, link));
+};
 
 
 
