@@ -20,10 +20,6 @@
 
 @import url('./__image-caption/modal__image-caption.css');
 
-/* Here it doesnt allow JavaScript to work when the image is clicked, but it does linked to index.css */
-
-@import url('./__display-image/modal__display-image.css');
-
 /* Same issue here */
 
 @import url('./__input/_type/modal__input_type.css');

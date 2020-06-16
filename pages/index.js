@@ -4,6 +4,10 @@ function modalDisplay(modal) {
   modal.classList.toggle('modal');
 }
 
+function toggleHeart(e){
+  e.target.classList.toggle('place__liked');
+}
+
 //---------------------Edit Profile-----------------------------------
 
 const editModal = document.querySelector('.modal__type_edit-profile');
@@ -35,39 +39,6 @@ editModal.addEventListener('submit', updateProfile);
 
 // editSaveButton.addEventListener('click', updateProfile);
 
-
-//------------------------Add Place-----------------------------------
-
-const addModal = document.querySelector('.modal__type_add-place');
-const addButton = document.querySelector('.profile__add-btn');
-const addPlaces = document.querySelector('.modal__input_type_place-name');
-const addPlaceImage = document.querySelector('.modal__input_type_place-url');
-const addClose = addModal.querySelector('.modal__add-close');
-
-// addPlaces.textContent = title;
-// addPLacesImage.style.backgroundImage = `url('${link}')`;
-
-addButton.addEventListener('click', () => {
-  modalDisplay(addModal);
-});
-
-addClose.addEventListener('click', () => {
-  modalDisplay(addModal);
-});
-
-addModal.addEventListener('submit', (e) => {
-  e.preventDefault();
-
-  renderPlace({name: addPlaces.value, link: addPlaceImage.value});
-
-  modalDisplay(addModal);
-});
-
-// addSaveButton.addEventListener('click', addPlace);
-// addModal.addEventListener('submit', addPlace);
-
-
-
 //--------------------------------Image Zoom-----------------------------
 
 const imageModal = document.querySelector('.modal__type_image');
@@ -76,7 +47,7 @@ const modalCaption = document.querySelector('.modal__image-caption');
 const imageClose = imageModal.querySelector('.modal__image-close');
 
 function imageModalDisplay() {
-  imageModal.classList.toggle('modal__display-image');
+  imageModal.classList.toggle('display_image-modal');
 }
 
 function displayImage(data){
@@ -95,9 +66,6 @@ imageClose.addEventListener('click', () => {
 
 //------------------------------Like Button-----------------------------
 
-function toggleHeart(e){
-  e.target.classList.toggle('place__liked');
-}
 
 
 
@@ -169,6 +137,38 @@ const renderPlace = (name, link) => {
 initialCards.forEach ((data) => {
   renderPlace(data);
 })
+
+//------------------------Add Place-----------------------------------
+
+const addModal = document.querySelector('.modal__type_add-place');
+const addButton = document.querySelector('.profile__add-btn');
+const addPlaces = document.querySelector('.modal__input_type_place-name');
+const addPlaceImage = document.querySelector('.modal__input_type_place-url');
+const addClose = addModal.querySelector('.modal__add-close');
+
+// addPlaces.textContent = title;
+// addPLacesImage.style.backgroundImage = `url('${link}')`;
+
+addButton.addEventListener('click', () => {
+  modalDisplay(addModal);
+});
+
+addClose.addEventListener('click', () => {
+  modalDisplay(addModal);
+});
+
+addModal.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  renderPlace({name: addPlaces.value, link: addPlaceImage.value});
+
+  modalDisplay(addModal);
+});
+
+// addSaveButton.addEventListener('click', addPlace);
+// addModal.addEventListener('submit', addPlace);
+
+
 
   
 

@@ -16,12 +16,11 @@
 
 @import url('../blocks/edit/edit.css');
 
-@import url('../blocks/add/add.css');
-
 @import url('../blocks/button/button.css');
 
 @import url('../blocks/footer/footer.css');
 
-/* I COULD NOT get the following import to work with the JavaScript when linked to modal.css. What can I do? */
+/* Thank you for the articles, I made it work by simply removing it from the modal family all together. Beacause I am already behind
+on project 5, I will have to get a better grasp on it and try to implement it in future projects. Would this work ok for now?*/
 
-@import url('../blocks/modal/__display-image/modal__display-image.css');
+@import url('../blocks/display_image-modal/display_image-modal.css');
