@@ -17,7 +17,7 @@
 
 @media screen and (min-width: 50px) and (max-width: 899px) {
     .modal__window_remove-styles {
-        top: 20%;
+        top: 15%;
         left: 5%;
     }
 }
