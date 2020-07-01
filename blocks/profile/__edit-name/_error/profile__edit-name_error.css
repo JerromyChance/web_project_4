@@ -1,0 +1,4 @@
+.place__edit-name_error {
+    display: flex;
+    position: absolute;
+}

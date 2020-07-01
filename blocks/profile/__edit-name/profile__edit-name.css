@@ -1,0 +1,7 @@
+@import url('./_error/profile__edit-name_error.css');
+
+.place__edit-name {
+    display: none;
+    padding: 1px;
+    color: red;
+}

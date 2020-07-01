@@ -42,11 +42,15 @@
             <div class="modal__window ">
             <button class="modal__close-btn modal__edit-close button"></button>
             <h2 class="modal__heading">Edit Profile</h2>
+
             <form action="submit" class="modal__form">
                 <input class="modal__input edit_name" type="text" name="set_name" id="set_name" size="60" placeholder="Name">
+                <span id="set_name-error">PLEASE</span>
                 <input class="modal__input edit_job" type="text" name="set_job" id="set_job" size="60" placeholder="Job">
+                <span id="set_job-error">PLEASE</span>
                 <button class="modal__save-btn button edit__save">Save</button>
             </form>
+
             </div>
         </div>
 
@@ -55,11 +59,15 @@
             <div class="modal__window ">
             <button class="modal__close-btn modal__add-close button"></button>
             <h2 class="modal__heading">Add Place</h2>
+
             <form action="submit" class="modal__form">
                 <input class="modal__input modal__input_type_place-name" type="text" name="set_place" id="set_place" size="60" placeholder="Location">
+                <span id="modal__input-error">PLEASE</span>
                 <input class="modal__input modal__input_type_place-url" type="text" name="set_image" id="set_image" size="60" placeholder="Image URL">
+                <span id="set_image-error">PLEASE</span>
                 <button class="modal__save-btn button place__save">Save</button>
             </form>
+
             </div>
         </div>
 
@@ -96,6 +104,6 @@
         </template>
 
         <script src="./pages/index.js"></script>
-
+        <script src="./pages/validation.js"></script>
     </body>
 </html>
